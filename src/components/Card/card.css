@@ -28,13 +28,16 @@
     backface-visibility: hidden;
 }
 
-.card__front {
+.card__back {
     background-color: maroon;
+    background: url("./cardImages/back.png");
+    background-size: cover;
     color: black;
 }
 
-.card__back {
+.card__front {
     background-color: whitesmoke;
+    background-size: cover;
     color: black;
     transform: rotateY(180deg);
 }

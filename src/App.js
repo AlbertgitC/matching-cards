@@ -5,7 +5,7 @@ import Card from './components/Card/card';
 function App() {
   return (
     <div className="App">
-      <Card />
+      <Card value="spadeK" />
     </div>
   );
 }
