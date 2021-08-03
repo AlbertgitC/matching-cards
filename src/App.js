@@ -4,7 +4,7 @@ import Card from './components/Card/card';
 import Table from './components/Table/table';
 
 function App() {
-    const sets = [ "heartA", "clubJ", "diamondQ", "spadeK" ];
+    const sets = ["heartA", "clubJ", "diamondQ", "spadeK", "club3", "heart2", "diamond7", "spade9"];
     const deck = [];
 
     for (let card of sets) {

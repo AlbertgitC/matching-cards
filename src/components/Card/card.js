@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 require("./card.css");
 
 function Card(props) {
@@ -6,7 +6,9 @@ function Card(props) {
         flip: "",
         cardImg: ""
     };
-    const [ state, setState ] = useState(defaultState);
+    const [state, setState] = useState(defaultState);
+    const [cardHeight, setHeight] = useState("150px");
+    const cardEle = useRef(null);
 
     useEffect(() => {
         if (props.value) {
@@ -22,6 +24,22 @@ function Card(props) {
         };
     }, []);
 
+    useEffect(() => {
+        function resizeCard() {
+            if (cardEle.current.clientWidth) {
+                let newHeight = cardEle.current.clientWidth * 1.42;
+                setHeight(`${newHeight}px`);
+                console.log(newHeight);
+            };
+        };
+
+        window.addEventListener("resize", resizeCard);
+
+        resizeCard();
+
+        return () => window.removeEventListener("resize", resizeCard);
+    }, []);
+
     function handleClick() {
         if (state.flip === "") {
             setState({ ...state, flip: "card__inner--flip" });
@@ -31,7 +49,7 @@ function Card(props) {
     };
 
     return (
-        <div className="card" onClick={handleClick}>
+        <div className="card" ref={cardEle} style={{ height: `${cardHeight}` }} onClick={handleClick}>
             <div className={`card__inner ${state.flip}`}>
                 <div className="card__back" />
                 <div 

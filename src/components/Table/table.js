@@ -1,6 +1,8 @@
+require("./table.css");
+
 function Table(props) {
     return (
-        <div>
+        <div className="table">
             {props.children}
             <div>block holder</div>
         </div>
