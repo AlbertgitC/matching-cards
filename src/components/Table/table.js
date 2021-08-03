@@ -4,7 +4,7 @@ function Table(props) {
     return (
         <div className="table">
             {props.children}
-            <div>block holder</div>
+            <div className="table__blocker">block holder</div>
         </div>
     );
 };

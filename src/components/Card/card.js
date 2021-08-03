@@ -14,15 +14,19 @@ function Card(props) {
         if (props.value) {
             import(`./cardImages/${props.value}.png`)
                 .then(res => {
-                    setState({ ...state, cardImg: res.default });
+                    setState(state => {
+                        return { ...state, cardImg: res.default };
+                    });
                 });
         } else {
             import("./cardImages/jokerB.png")
                 .then(res => {
-                    setState({ ...state, cardImg: res.default });
+                    setState(state => {
+                        return { ...state, cardImg: res.default };
+                    });
                 });
         };
-    }, []);
+    }, [props.value]);
 
     useEffect(() => {
         function resizeCard() {

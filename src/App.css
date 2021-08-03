@@ -1,8 +1,33 @@
 .App {
     text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     background-color: #334756;
     padding: 13px;
     padding-bottom: 100%;
+}
+
+.links {
+    display: flex;
+    justify-content:flex-end;
+}
+
+.link-icon {
+    font-size: 34px;
+    margin-left: 15px;
+}
+
+.link-icon:link {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.link-icon:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.link-icon svg {
+    color: #ffffff;
 }

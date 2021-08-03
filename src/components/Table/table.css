@@ -2,5 +2,9 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
-    /* background-color: #334756; */
+    margin-bottom: 17px;
+}
+
+.table__blocker {
+    display: none;
 }
