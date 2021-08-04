@@ -6,6 +6,7 @@
     background-color: #334756;
     padding: 13px;
     padding-bottom: 100%;
+    position: relative;
 }
 
 .links {
@@ -30,4 +31,38 @@
 
 .link-icon svg {
     color: #ffffff;
+}
+
+.modal {
+    background-color: #282C2F;
+    position: absolute;
+    width: 294px;
+    top: 160px;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 15px;
+    color: #ffffff;
+    font-size: 27px;
+    font-weight: 600;
+    padding: 27px 0;
+}
+
+.modal--hidden {
+    display: none;
+}
+
+.modal p {
+    margin: 0;
+    margin-bottom: 25px;
+}
+
+.modal button {
+    background-image: linear-gradient(to right, #60E4CE, #03C4A1);
+    width: 144px;
+    height: 60px;
+    border-radius: 26px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ffffff;
+    cursor: pointer;
 }

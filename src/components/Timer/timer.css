@@ -1,5 +1,10 @@
 .timer {
+    display: flex;
     color: #ffffff;
     font-size: 36px;
     padding: 16px;
+}
+
+.timer p {
+    margin: 10px 0;
 }

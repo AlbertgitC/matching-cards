@@ -3,8 +3,17 @@
     flex-wrap: wrap;
     width: 100%;
     margin-bottom: 17px;
+    position: relative;
 }
 
 .table__blocker {
+    display: block;
+    position: absolute;
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+}
+
+.table__blocker--hidden {
     display: none;
 }
