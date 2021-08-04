@@ -32,6 +32,7 @@
     background: url("./cardImages/back.png");
     background-size: cover;
     color: black;
+    cursor: pointer;
 }
 
 .card__front {
@@ -39,4 +40,11 @@
     background-size: cover;
     color: black;
     transform: rotateY(180deg);
+}
+
+@media only screen and (min-width: 768px) {
+    .card {
+        margin: 3px 4.5%;
+        width: 16%;
+    }
 }

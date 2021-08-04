@@ -4,9 +4,9 @@
     flex-direction: column;
     justify-content: center;
     background-color: #334756;
-    padding: 13px;
-    padding-bottom: 100%;
+    padding: 0 13px;
     position: relative;
+    height: 100%;
 }
 
 .links {
@@ -65,4 +65,13 @@
     font-weight: 600;
     color: #ffffff;
     cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    .App {
+        max-width: 800px;
+        margin: 0 auto;
+        justify-content: flex-start;
+        height: unset;
+    }
 }
